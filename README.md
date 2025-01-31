@@ -65,6 +65,13 @@ Run it to get your token:
 node generateToken.js
 ```
 
+
+### 6. Generate Test data
+```
+
+node testdata.js
+```
+
 ### 7. Start the Server
 ```
 
