@@ -1,0 +1,18 @@
+enum Status {
+  AVAILABLE
+  DEPLOYED
+  DESTROYED
+  DECOMMISSIONED
+}
+
+model Gadget {
+  id              String    @id @default(uuid())
+  name            String
+  codename        String    @unique
+  status          Status    @default(AVAILABLE)
+  decommissionedAt DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("gadgets")
+}
